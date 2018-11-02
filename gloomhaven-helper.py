@@ -8,14 +8,15 @@ Rule_LIST = [
   ]
   
 Rule_DEFINITION = {
-  "poison": "add one damage",
-  "stun": "do not do anything",
-  "retire": "end the character"
+  "poison": "All enemies add +1 to all of their attacks on the affected figure",
+  "stun": "Cannot do any ability or use Items (immediate effect). Character must do Long Rest or discard two Hand cards on their next turn",
+
 }
 
 Flow_LIST = [
     "newCharacter",
     "make a new character",
+    "retire",
     # "levelUp", 
     # "applyEnhancement",
     # "donate",
@@ -26,7 +27,23 @@ Flow_LIST = [
 
 
 Flow_WALKTHROUGH = {
-   "make a new character":["Pick an unlocked class (can’t play duplicate classes in same scenario) [p6]","Pick a starting level. May start at any level up to the city’s Prosperity Level","Record character name and level in a new Character Sheet","Receive Gold = 15 x (L+1) (L = character’s level)","Receive XP = minimum required for level (as per Character Sheet)","Choose 1 Perk for every character the player has retired. If 1 player controlling 2 characters, count each character’s retirement lineage separately [p48]","Draw 2 random Personal Quest cards and choose one, shuffling the other to the deck (if deck is empty, no quest is received).","A player may keep their Personal Quest secret or public as desired [FAQ]","Create Active Card Pool with Level 1 and Level X Ability Cards","Follow the Level Up a Character steps below for the remaining levels"]
+    "make a new character":
+    [
+        "Pick an unlocked class (can’t play duplicate classes in same scenario) [p6]",
+        "Pick a starting level. May start at any level up to the city’s Prosperity Level",
+        "Record character name and level in a new Character Sheet",
+        "Receive Gold = 15 x (L+1) (L = character’s level)",
+        "Receive XP = minimum required for level (as per Character Sheet)",
+        "Choose 1 Perk for every character the player has retired. If 1 player controlling 2 characters, count each character’s retirement lineage separately [p48]",
+        "Draw 2 random Personal Quest cards and choose one, shuffling the other to the deck (if deck is empty, no quest is received).",
+        "A player may keep their Personal Quest secret or public as desired [FAQ]","Create Active Card Pool with Level 1 and Level X Ability Cards",
+        "Follow the Level Up a Character steps below for the remaining levels"
+    ],
+    "retire":
+    [
+        "end", 
+        "the character"
+    ]
 }
 
 #------------------------------Part2--------------------------------
